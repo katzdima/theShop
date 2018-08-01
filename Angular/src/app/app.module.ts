@@ -13,8 +13,12 @@ import { ShopComponent } from './components/layout/shop/shop.component';
 import { StatisticsComponent } from './components/layout/statistics/statistics.component';
 import { ProductsComponent } from './components/layout/products/products.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { CategoryNavbarComponent } from './components/layout/shop/category-navbar/category-navbar.component';
+import { CartSidebarComponent } from './components/layout/shop/cart-sidebar/cart-sidebar.component';
+import { ShopContentComponent } from './components/layout/shop/shop-content/shop-content.component';
 
 import{ProductsService} from './services/products.service';
+import{CategoriesService} from './services/categories.service';
 
 const appRoutes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -37,7 +41,10 @@ const appRoutes: Routes = [
     ShopComponent,
     StatisticsComponent,
     ProductsComponent,
-    LayoutComponent
+    LayoutComponent,
+    CategoryNavbarComponent,
+    CartSidebarComponent,
+    ShopContentComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [ProductsService],
+  providers: [ProductsService,CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

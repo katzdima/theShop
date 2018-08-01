@@ -8,14 +8,10 @@ import { ProductsService } from '../../../services/products.service';
 })
 
 export class ShopComponent implements OnInit {
-  data;
-  constructor(private _productsService: ProductsService) { }
+
+  constructor() { }
 
   ngOnInit() {
-    this._productsService.getAllProducts().subscribe((res) => {
-      this.data = res;
-      console.log(`on init :${this.data.data[0].name}`);
-    })
   }
 
 }

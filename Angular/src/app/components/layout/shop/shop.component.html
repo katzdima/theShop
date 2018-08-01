@@ -1,12 +1,16 @@
-<p>
-  shop works!
-</p>
-
-<div *ngIf="data">
-  <h2>api products work</h2>
-  <div *ngFor="let i of data.data">
-    <h3>{{i.name}}</h3>
-    <p>{{i.price}}</p>
-    <br>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="sidebar col-2 border-right">
+      <app-cart-sidebar></app-cart-sidebar>
+    </nav>
+    <div class="col-10">
+      <app-category-navbar></app-category-navbar>
+      <main>
+        <app-shop-content></app-shop-content>
+      </main>
+    </div>
   </div>
-</div>
+</div>     
+
+
+

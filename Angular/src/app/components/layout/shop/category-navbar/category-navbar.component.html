@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand border-bottom">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" >all</a>
+        </li>
+        
+          <li *ngFor="let item of data.data">
+            <a class="nav-link">{{item.name}}</a>
+          </li>
+        
+    </ul>
+</nav>

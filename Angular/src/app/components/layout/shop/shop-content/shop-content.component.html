@@ -1,8 +1,8 @@
 <div *ngIf="data">
-    <h2>api products work</h2>
-    <div *ngFor="let i of data.data">
-      <h3>{{i.name}}</h3>
-      <p>{{i.price}}</p>
-      <br>
-    </div>
+  <h2>api products work</h2>
+  <div *ngFor="let product of data.data">
+    <h3>{{product.name}}</h3>
+    <p>{{product.price}}</p>
+    <br>
   </div>
+</div>

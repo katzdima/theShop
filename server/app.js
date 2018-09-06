@@ -6,6 +6,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
+const multer = require('multer');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -36,6 +37,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
+
+
+// static files
+//app.use(express.static(path.join(__dirname, '/uploads')));
+app.use(express.static(path.join(__dirname, '/images')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

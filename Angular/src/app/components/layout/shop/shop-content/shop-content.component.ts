@@ -16,6 +16,7 @@ export class  ShopContentComponent implements OnInit {
     this._productsService.getAllProducts().subscribe((res) => {
       this.data = res;
       console.log(`on init :${this.data.data[0].name}`);
+      console.log(this.data);
     })
   }
 

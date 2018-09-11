@@ -1,10 +1,15 @@
 <div *ngIf="data">
-  <h2>api products work</h2>
-  <div *ngFor="let product of data.data">
-    <h3>{{product.name}}</h3>
-    <p>{{product.price}}</p>
-    <img src={{product.image}}>
-    <br>
-  </div>
+  <div class="row">
+    <div *ngFor="let product of data.data" class="col-2 card ">
+        <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+        <h4 class="mx-auto">{{product.name}}</h4>
+        <p class="mx-auto">{{product.price | currency:'NIS'}}</p>
+        <!-- <button type="button" class="button success" (click)="addProductToCart(product, 1)">Add To Cart</button> -->
+        <!-- <button type="button" class="button small js-btn-remove" *ngIf="productInCart(product) | async" (click)="removeProductFromCart(product, 1)">Remove item from cart</button> -->
+        <button type="button" class="button success">Add To Cart</button>
+        <button type="button" class="button small js-btn-remove" >Remove item from cart</button>
+        <br>
+    </div>
+  </div>  
 </div>
 

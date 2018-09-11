@@ -1,3 +1,19 @@
-<p>
-  products works!
-</p>
+<div class="row">
+  <div class="col-3">
+    <h2 class="mx-auto">Add/Edit products</h2>
+  </div>
+  <div class="col-9">
+    <div class="container">
+      <div *ngIf="data">
+        <div class="row">
+          <div *ngFor="let product of data.data" class="col-2 card ">
+              <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+              <h4 class="mx-auto">{{product.name}}</h4>
+              <p class="mx-auto">{{product.price | currency:'NIS'}}</p>
+              <button type="button" class="button success my-2">Edit Product</button>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>

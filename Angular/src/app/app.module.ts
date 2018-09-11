@@ -23,7 +23,8 @@ import{CategoriesService} from './services/categories.service';
 const appRoutes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'statistics', component: StatisticsComponent},
-  {path: 'shop', component: ShopComponent}
+  {path: 'shop', component: ShopComponent},
+  {path: 'products', component: ProductsComponent}
  // { path: 'all', component: AllComponent },
   //{ path: 'single/add', component: SingleAddComponent },
  // { path: 'single/:id', component: SingleViewComponent },

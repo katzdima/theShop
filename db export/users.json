@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5baad4d4ccf36418a8d2bf7f"},"username":"costumer@g.com","firstname":"jhone","lastname":"dow","email":"costumer@g.com","pwd":"$2a$10$7FU6GhTCdofXmmU75YM5zu9k/hs2/3DbaP3hBcfXjl.DebXiFZFJ2","city":"tlv","street":"hertzel","role":"costumer","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bab1e6411f0b63c702e067b"},"username":"test@g.com","firstname":"la","lastname":"lala","email":"test@g.com","pwd":"$2a$10$EmrNnmUjxryM3c5ZBywlb.Fgoy8oS1xHndPrvPnqF98zWTRhYnyv6","city":"tlv","street":"hertzel","role":"admin","__v":{"$numberInt":"0"}}

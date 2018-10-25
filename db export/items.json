@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5bb1b190f3ddc42de048f17b"},"product":[{"$oid":"5bad2a6ce9d88a26acec43b3"}],"cart":[{"$oid":"5bb1b158f3ddc42de048f178"}],"quantity":{"$numberInt":"1"},"totalPrice":{"$numberInt":"12"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bb1b195f3ddc42de048f17c"},"product":[{"$oid":"5bad2a95e9d88a26acec43b5"}],"cart":[{"$oid":"5bb1b158f3ddc42de048f178"}],"quantity":{"$numberInt":"1"},"totalPrice":{"$numberInt":"6"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bb1b1a1f3ddc42de048f17e"},"product":[{"$oid":"5bad2a7fe9d88a26acec43b4"}],"cart":[{"$oid":"5bb1b158f3ddc42de048f178"}],"quantity":{"$numberInt":"1"},"totalPrice":{"$numberInt":"15"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bb1b1c8f3ddc42de048f180"},"product":[{"$oid":"5bad2a6ce9d88a26acec43b3"}],"cart":[{"$oid":"5bb1b158f3ddc42de048f179"}],"quantity":{"$numberInt":"2"},"totalPrice":{"$numberInt":"24"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bb1b1cef3ddc42de048f181"},"product":[{"$oid":"5bad2b3be9d88a26acec43b6"}],"cart":[{"$oid":"5bb1b158f3ddc42de048f179"}],"quantity":{"$numberInt":"5"},"totalPrice":{"$numberInt":"10"},"__v":{"$numberInt":"0"}}

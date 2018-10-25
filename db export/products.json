@@ -1,0 +1,7 @@
+{"_id":{"$oid":"5bad2a6ce9d88a26acec43b3"},"category":[{"$oid":"5b570a0a12c88625b818e86b"}],"name":"milk","price":{"$numberInt":"12"},"image":"http://localhost:3000/images/image-1538371773649.jpg","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bad2a7fe9d88a26acec43b4"},"category":[{"$oid":"5b570a0a12c88625b818e86b"}],"name":"butter","price":{"$numberInt":"15"},"image":"http://localhost:3000/images/image-1538075263337.jpg","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bad2a95e9d88a26acec43b5"},"category":[{"$oid":"5b6101c8f2a40f22545f1eb4"}],"name":"orange juice","price":{"$numberInt":"6"},"image":"http://localhost:3000/images/image-1538075285047.jpg","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bad2b3be9d88a26acec43b6"},"category":[{"$oid":"5b6101faf2a40f22545f1eb6"}],"name":"gum","price":{"$numberInt":"2"},"image":"http://localhost:3000/images/image-1538075451073.jpg","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bad2b4be9d88a26acec43b7"},"category":[{"$oid":"5b6101c8f2a40f22545f1eb4"}],"name":"water","price":{"$numberInt":"2"},"image":"http://localhost:3000/images/image-1538075467016.jpg","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bad2b63e9d88a26acec43b8"},"category":[{"$oid":"5b570a0a12c88625b818e86b"}],"name":"yogurt","price":{"$numberInt":"4"},"image":"http://localhost:3000/images/image-1538075491055.jpg","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bad2b74e9d88a26acec43b9"},"category":[{"$oid":"5b6101d4f2a40f22545f1eb5"}],"name":"bread","price":{"$numberInt":"6"},"image":"http://localhost:3000/images/image-1538075508050.jpg","__v":{"$numberInt":"0"}}

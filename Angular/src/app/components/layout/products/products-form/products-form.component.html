@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 class="mx-auto">Add products</h2>
+    <form #addProductForm="ngForm" (ngSubmit)="addProduct()">
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" #name="ngModel" required class="form-control" name="name" [(ngModel)]="productModel.name" minlength="3">
+            <small class="text-danger" *ngIf="name.invalid && price.touched">Invalid name</small>  
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" #price="ngModel" required class="form-control" name="price" [(ngModel)]="productModel.price" min="1">
+            <small class="text-danger" *ngIf="price.invalid && price.touched">Invalid amount</small>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select class="form-control" name="category" required [(ngModel)]="productModel.category._id" #category="ngModel">
+                <option *ngFor="let category of categories" [value]=" category._id ">{{category.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="image">Image</label>
+            <br>
+            <input type="file" name="image" #image="ngModel"  (change)="onFileChange($event)" [(ngModel)]="productModel.image">
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="addProductForm.form.invalid" >Add Product</button>
+
+    </form>
+
+</div>
+

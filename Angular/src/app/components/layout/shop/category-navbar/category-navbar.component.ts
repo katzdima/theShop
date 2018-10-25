@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoriesService } from '../../../../services/categories.service';
+import { Category , CategoryRes} from '../../../../interfaces/category';
+
 
 @Component({
   selector: 'app-category-navbar',
@@ -7,14 +9,22 @@ import { CategoriesService } from '../../../../services/categories.service';
   styleUrls: ['./category-navbar.component.css']
 })
 export class CategoryNavbarComponent implements OnInit {
-  data;
+  categories: Category[];
+
   constructor(private _categoriesService: CategoriesService) { }
 
   ngOnInit() {
-    this._categoriesService.getAllCategoies().subscribe((res)=>{
-      this.data=res;
-      console.log(`on init :${this.data.data[0].name}`);
+    this._categoriesService.getAllCategoies().subscribe((res: CategoryRes)=>{
+      this.categories=res.data;
     })
+    
+  }
+  selectCategory(category){
+    this._categoriesService.setSelectedCategory(category._id);
+  }
+
+  selectAllCategories(){
+    this._categoriesService.setSelectedCategory('all');
   }
 
 }

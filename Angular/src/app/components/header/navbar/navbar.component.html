@@ -1,33 +1,30 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">The Shop</a>
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
+  <a class="navbar-brand" routerLink="about">The Shop</a>
 
   <div class="collapse navbar-collapse" id="navbarsExample02">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" [class.activated]="currentUrl == '/'">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="about" [class.activated]="currentUrl == '/about'">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="shop" [class.activated]="currentUrl == '/shop'">shop</a>
+        <a class="nav-link" routerLink="shop" [class.activated]="currentUrl == '/shop'" *ngIf="isAuth">Shop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="products" [class.activated]="currentUrl == '/products'" >products</a>
+        <a class="nav-link" routerLink="products" [class.activated]="currentUrl == '/products'" *ngIf="isAuth && isAdmin">Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" [class.activated]="currentUrl == '/'">orders</a>
+        <a class="nav-link" routerLink="order" [class.activated]="currentUrl == '/order'" *ngIf="isAuth">Orders</a>
       </li>
+      
       <li class="nav-item">
-        <a class="nav-link" routerLink="about" [class.activated]="currentUrl == '/about'">about</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="statistics" [class.activated]="currentUrl == '/statistics'">statistics</a>
+        <a class="nav-link" routerLink="statistics" [class.activated]="currentUrl == '/statistics'" *ngIf="isAuth">Statistics</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-md-0">
-      <input class="form-control" type="text" placeholder="Search">
-    </form>
+
+    <button class="btn btn-light my-2 mx-2 my-sm-0 inline" type="button" [routerLink]="'/register'" *ngIf="!isAuth">Register</button>
+    <button class="btn btn-light my-2 mx-2 my-sm-0 inline" type="button" [routerLink]="'/login'" *ngIf="!isAuth">Login</button>  
+    <button class="btn btn-light my-2 mx-2 my-sm-0 inline" type="button" (click)="logout()" *ngIf="isAuth">Logout</button> 
+
   </div>
 </nav>
 

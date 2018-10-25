@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5b570a0a12c88625b818e86b"},"name":"Dairy"}
+{"_id":{"$oid":"5b6101c8f2a40f22545f1eb4"},"name":"Drinks"}
+{"_id":{"$oid":"5b6101d4f2a40f22545f1eb5"},"name":"pastry"}
+{"_id":{"$oid":"5b6101faf2a40f22545f1eb6"},"name":"sweets"}

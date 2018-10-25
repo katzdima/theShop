@@ -1,16 +1,18 @@
-<div class="row">
+<div class="row mb-5">
   <div class="col-3">
-    <h2 class="mx-auto">Add/Edit products</h2>
+    <app-products-form  *ngIf="!is_edit"></app-products-form>
+    <app-products-form-edit  [product]="productToEdit" *ngIf="is_edit"></app-products-form-edit>
   </div>
   <div class="col-9">
     <div class="container">
-      <div *ngIf="data">
+      <h2 class="text-center my-1">The Products list  <i class="fas fa-plus-circle fa-lg" (click)="addProduct()"></i></h2>
+      <div *ngIf="products">
         <div class="row">
-          <div *ngFor="let product of data.data" class="col-2 card ">
+          <div *ngFor="let product of products" class="col-2 card mx-1 my-1">
               <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
               <h4 class="mx-auto">{{product.name}}</h4>
               <p class="mx-auto">{{product.price | currency:'NIS'}}</p>
-              <button type="button" class="button success my-2">Edit Product</button>
+              <button type="button" class="btn btn-success button success my-2" (click)="editProduct(product)">Edit Product</button>
           </div>
         </div>  
       </div>

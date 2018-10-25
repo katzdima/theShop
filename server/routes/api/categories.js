@@ -8,12 +8,23 @@ var corsOptions = {
 }
 
 const Category = require('../../models/category.model');
+const authValid = require('../../security/auth-validator');
 
-router.get('/',  (req, res) => {
+//----------------------get all ---------------------------
+router.get('/', authValid, (req, res) => {
     Category.find((err, data) => {
       res.json({data : data, status: 200, msg: "Get all categories"});
     });
 });
 
+//---------------------get one ------------------
+router.get('/:id',authValid, (req, res) => {
+  console.log(req.params.id);
+  id = req.params.id;
+  Category.find({_id :id },(err, data) => {
+    if (err) return handleError(err);
+    res.json({data : data, status: 200, msg: "get one product"})
+  });
+})
 
 module.exports = router;

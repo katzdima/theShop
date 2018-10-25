@@ -4,10 +4,14 @@ var Schema = mongoose.Schema;
 var productSchema = new Schema({
     //_id: Schema.Types.ObjectId,
     name: String,
-    category: Number,
+    category: [{ 
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
+    }],
     price: Number,
     image: String
 });
 
 
-module.exports = mongoose.model('Product', productSchema );
+ const Product= mongoose.model('Product', productSchema );
+ module.exports = Product ;

@@ -1,0 +1,54 @@
+<div class="container mb-5">
+  <div *ngIf="isStepOne">
+    <form #firstRegistrationForm="ngForm" >
+        <h2>Registration Information</h2>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" #email="ngModel" required email class="form-control" name="email" [(ngModel)]="regInfo.email" >
+        </div>
+
+        <div class="form-group">
+            <label for="pwd1">Password</label>
+            <input type="password" #pwd1="ngModel" required class="form-control" name="pwd1" [(ngModel)]="regInfo.pwd1" password minlength="4">
+        </div>
+
+        <div class="form-group">
+            <label for="pwd2">Password Confirmation</label>
+            <input type="password" #pwd2="ngModel" required class="form-control" name="pwd2" [(ngModel)]="regInfo.pwd2" password minlength="4">
+        </div>
+        <button type="button" class="btn btn-primary" [disabled]="firstRegistrationForm.form.invalid" (click)="stepOne()" >Next</button>
+    
+        <div *ngIf="validationErr" class="validation-error my-1">
+            {{ validationErr }}
+        </div>
+    </form>
+  </div>
+
+  <div *ngIf="!isStepOne">
+    <form #secondRegistrationForm="ngForm" (ngSubmit)="stepTwo()">
+        <h2>Personal Information</h2>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" #firstName="ngModel" required class="form-control" name="firstName" [(ngModel)]="regInfo.firstName">
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" #lastName="ngModel" required class="form-control" name="lastName" [(ngModel)]="regInfo.lastName">
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" #city="ngModel" required class="form-control" name="city" [(ngModel)]="regInfo.city">
+        </div>
+
+        <div class="form-group">
+            <label for="street">Street</label>
+            <input type="text" #street="ngModel" required class="form-control" name="street" [(ngModel)]="regInfo.street">
+        </div>
+        <button class="btn btn-primary" (click)="returnToStepOne()">Previous</button>
+        <button type="submit" class="btn btn-primary mx-2" [disabled]="secondRegistrationForm.form.invalid" >Registration</button>
+    </form>
+  </div>
+
+</div>

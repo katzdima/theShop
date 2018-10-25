@@ -1,0 +1,10 @@
+<h1 class="text-center">Add To Cart</h1>
+<div mat-dialog-content >
+    <p>What amount of the product you like to buy?</p>
+    <mat-form-field>
+        <input matInput type="number" [(ngModel)]="amount" min="1" required>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions >
+    <button mat-button mat-dialog-close (click)="addProductToCart(data.product,amount)" >Save to cart</button>
+</div>

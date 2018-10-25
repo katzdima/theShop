@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class='text-center bold'>Login</h1>
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" #email="ngModel" required  class="form-control" name="email" [(ngModel)]="loginInfo.email" >
+      </div>
+
+      <div class="form-group">
+          <label for="pwd">Password</label>
+          <input type="password" #pwd="ngModel" required class="form-control" name="pwd" [(ngModel)]="loginInfo.pwd" password minlength="4">
+      </div>
+
+      <small class="text-danger " *ngIf="!valid">Login failed, change email or password and try again.</small> 
+
+      <button type="submit" class="btn btn-primary  btn-block mt-2" [disabled]="loginForm.form.invalid" >Login</button>
+  </form>
+</div>

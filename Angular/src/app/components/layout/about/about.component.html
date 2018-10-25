@@ -1,3 +1,10 @@
-<p>
-  about works!
-</p>
+<div class="back">
+  <div class="container">
+    <h1 class="text-center">Welcome to Shop project</h1>
+    <br>
+    <p>Welcome to my MEAN stack project as part of full stack course in Jhon Bryce college.This web application is simulating the on-line grocery store, with shopping cart and order delivery, also the administration part of the store to add and edit products and view statistics. </p>
+    <p *ngIf="!isAuth">Try it now by login in.</p>
+    <br>
+    <button class="btn btn-dark btn-block my-2 mx-2 my-sm-0 mx-auto" type="button" [routerLink]="'/login'" *ngIf="!isAuth">Login</button> 
+  </div>
+</div>

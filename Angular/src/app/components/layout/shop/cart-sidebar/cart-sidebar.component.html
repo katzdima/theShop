@@ -1,30 +1,30 @@
-<div class="sidebar-sticky">
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">
-        <span data-feather="home"></span>
-        Shopping cart
-        <span class="sr-only">(current)</span>
-      </a>
+
+<div class=" order-md-2 mb-4">
+  <h4 class="d-flex justify-content-between align-items-center mb-3 mt-3">
+    <span class="text-muted">Shopping cart</span>
+    <span class="badge badge-secondary badge-pill">{{itemsAmount}}</span>
+  </h4>
+  <ul class="list-group mb-2">
+
+     <li *ngFor="let item of itemsInCartArr" class="list-group-item d-flex  lh-condensed justify-content-between px-1"> <!-- -->
+      <div>
+        <h6 class="my-0">{{item.product[0].name}}</h6>
+      </div>
+      <span class="text-muted text-right float-right form-inline">{{item.totalPrice}}&#8362;</span>
+      <button type="button" class="close btn-sm float-right text-right form-inline" (click)="deleteItem(item)">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        <span data-feather="file"></span>
-        Item1
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        <span data-feather="file"></span>
-        Item2
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        <span data-feather="file"></span>
-        Item3
-      </a>
+    
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Total (NIS)</span>
+      <strong>{{totalCartPrice}}&#8362;</strong>
     </li>
   </ul>
+  
+  <button type="button" class="btn  btn-sm btn-danger  mb-1" (click)="discardCart()">Discard cart</button>
+  <br>
+  <button type="button" class="btn  btn-primary btn-block" (click)="placeOrder()">Place order</button>
+  
 </div>
 

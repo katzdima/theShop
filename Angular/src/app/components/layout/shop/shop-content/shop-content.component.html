@@ -1,15 +1,27 @@
-<div *ngIf="data">
+<div *ngIf="data" class="mb-10">
   <div class="row">
-    <div *ngFor="let product of data.data" class="col-2 card ">
+    <div *ngFor="let product of data" [hidden]="!(product.category==selected)" class="col-2">
+        <div class="card" > 
+            <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+            <h4 class="mx-auto">{{product.name}}</h4>
+            <p class="mx-auto">{{product.price | currency:'NIS'}}</p>
+            <button type="button" class="btn button btn-success" (click)="addProductDataToCard(product)">Add To Cart</button>
+            <br>
+        </div>
+    </div>
+  </div>
+    <div class="row">
+    <div *ngFor="let product of data" class="col-2 card "> 
+      <ng-container *ngIf="allProducts">
         <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
         <h4 class="mx-auto">{{product.name}}</h4>
-        <p class="mx-auto">{{product.price | currency:'NIS'}}</p>
-        <!-- <button type="button" class="button success" (click)="addProductToCart(product, 1)">Add To Cart</button> -->
-        <!-- <button type="button" class="button small js-btn-remove" *ngIf="productInCart(product) | async" (click)="removeProductFromCart(product, 1)">Remove item from cart</button> -->
-        <button type="button" class="button success">Add To Cart</button>
-        <button type="button" class="button small js-btn-remove" >Remove item from cart</button>
+        <p class="mx-auto">{{product.price | currency:'NIS' }}&#8362;</p>
+        <button type="button" class="btn button btn-success" (click)="addProductDataToCard(product)">Add To Cart</button>
         <br>
+      </ng-container>
     </div>
-  </div>  
-</div>
+  </div>
+  </div>
+  
+
 
